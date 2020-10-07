@@ -20,8 +20,8 @@ const RELIEF_PROFILE_TK0 = 54000, RELIEF_PROFILE_K0 = 58500, RELIEF_PROFILE_K1 =
 
 class App extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             value: '',
@@ -41,27 +41,33 @@ class App extends Component {
 
     }
 
-    currencyFormat(num) {
-        return num.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " IDR";
-    }
+    currencyFormat = num => num.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " IDR";
 
-    setDetails(value, limit, monthlyIncome, monthlyTax, salaryAfterTax,
-               annualIncome, annualTax, annualIncomeAfterTax, annualTaxAfterRelief) {
-        this.setState({
-            value: value,
-            limit: limit,
-            monthlyIncome: this.currencyFormat(parseFloat(monthlyIncome).toFixed(3)),
-            monthlyTax: this.currencyFormat(parseFloat(monthlyTax).toFixed(3)),
-            salaryAfterTax: this.currencyFormat(parseFloat(salaryAfterTax).toFixed(3)),
-            annualIncome: this.currencyFormat(parseFloat(annualIncome).toFixed(3)),
-            annualTax: this.currencyFormat(parseFloat(annualTax).toFixed(3)),
-            annualIncomeAfterTax: this.currencyFormat(parseFloat(annualIncomeAfterTax).toFixed(3)),
-            annualIncomeAfterTaxRelief: this.currencyFormat(parseFloat(annualTaxAfterRelief).toFixed(3))
-        });
-    }
+    setDetails = (value, limit, monthlyIncome, monthlyTax, salaryAfterTax,
+                  annualIncome, annualTax, annualIncomeAfterTax, annualTaxAfterRelief) => {
+           this.setState({
+               value: value,
+               limit: limit,
+               monthlyIncome: this.currencyFormat(parseFloat(monthlyIncome).toFixed(3)),
+               monthlyTax: this.currencyFormat(parseFloat(monthlyTax).toFixed(3)),
+               salaryAfterTax: this.currencyFormat(parseFloat(salaryAfterTax).toFixed(3)),
+               annualIncome: this.currencyFormat(parseFloat(annualIncome).toFixed(3)),
+               annualTax: this.currencyFormat(parseFloat(annualTax).toFixed(3)),
+               annualIncomeAfterTax: this.currencyFormat(parseFloat(annualIncomeAfterTax).toFixed(3)),
+               annualIncomeAfterTaxRelief: this.currencyFormat(parseFloat(annualTaxAfterRelief).toFixed(3))
+           });
+       };
 
 
     calculateTaxRelief = annualSalary => {
+        /*
+        Tax Relief
+        TK0 = 54.000.000 IDR
+        K0 = 58.500.000 IDR
+        K1 = 63.000.000 IDR
+        K2 = 67.500.000 IDR
+        K3 = 72.000.000 IDR
+        */
         let profile = this.state.profile;
         if (profile === "TK0") {
             return annualSalary - RELIEF_PROFILE_TK0
@@ -81,6 +87,12 @@ class App extends Component {
     };
 
     computeTax = income => {
+        /*
+        Annual Income from 0 to 50.000.000 IDR - tax rate is 5 %.
+        Annual Income from 50.000.000 to 250.000.000 IDR - tax rate is 15 %.
+        Annual Income from 250.000.000 to 500.000.000 IDR - tax rate is 25 %.
+        Annual Income above 500.000.000 IDR - tax rate is 30 %.
+        */
         const tierOneRate = 0.05;
         const tierTwoRate = 0.15;
         const tierThreeRate = 0.25;
@@ -105,20 +117,21 @@ class App extends Component {
         return bracketThreeMaxTax + tierFourRate * (income - bracketThree);
     };
 
-    recalculate() {
+    recalculate = () => {
         let income = this.state.value;
         let annualIncome = income * 12;
         let annualIncomeAfterTaxRelief = this.calculateTaxRelief(annualIncome);
         let annualTax = this.computeTax(annualIncomeAfterTaxRelief);
         let monthlyTax = annualTax / 12;
         let annualIncomeAfterTaxDeduction = annualIncome - annualTax;
+        let takeHomePay = annualIncomeAfterTaxDeduction / 12;
 
         this.setDetails(
             income,
             false,
             income,
             monthlyTax,
-            annualIncomeAfterTaxDeduction / 12,
+            takeHomePay,
             annualIncome,
             annualTax,
             annualIncomeAfterTaxDeduction,
@@ -142,7 +155,7 @@ class App extends Component {
                 annualIncomeAfterTaxRelief: ''
             });
         }
-    }
+    };
 
     processDetails = e => {
         const income = Number(e.target.value);
@@ -157,6 +170,7 @@ class App extends Component {
         let annualTax = this.computeTax(annualIncomeAfterTaxRelief);
         let monthlyTax = annualTax / 12;
         let annualIncomeAfterTaxDeduction = annualIncome - annualTax;
+        let takeHomePay = annualIncomeAfterTaxDeduction / 12;
 
         if (flag) {
             this.setDetails(
@@ -164,7 +178,7 @@ class App extends Component {
                 false,
                 income,
                 monthlyTax,
-                annualIncomeAfterTaxDeduction / 12,
+                takeHomePay,
                 annualIncome,
                 annualTax,
                 annualIncomeAfterTaxDeduction,
@@ -356,7 +370,7 @@ class App extends Component {
                         color="primary"
                         variant="extended"
                         aria-label="Delete"
-                        style={{margin: "0", marginTop: "5px"}}
+                        style={{margin: "0", marginTop: "5px",  backgroundColor: "black"}}
                         onClick={() => {
                             this.setState({taxBracketStatus: !taxBracketStatus});
                         }}
@@ -373,7 +387,7 @@ class App extends Component {
                             color="secondary"
                             variant="extended"
                             aria-label="Delete"
-                            style={{margin: "0"}}
+                            style={{margin: "0", backgroundColor: "black"}}
                             onClick={() => {
                                 this.setState({taxBracketStatus: !taxBracketStatus});
                             }}
