@@ -1,0 +1,10 @@
+{
+  "name": "Indonesia Income Tax Calculator",
+  "short_name": "Tax Calculator",
+  "theme_color": "#ff1e50",
+  "background_color": "#232882",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "splash_pages": null
+}
