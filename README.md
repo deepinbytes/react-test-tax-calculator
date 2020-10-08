@@ -8,7 +8,11 @@ $ docker-compose build
 $ docker-compose down
 $ docker-compose up -d
 ```
+### Running the tests
 
+```$xslt
+docker run `imagename` npm run test
+```
 ## Available Scripts
 
 In the project directory, you can run:
