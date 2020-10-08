@@ -1,0 +1,669 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot renders 1`] = `
+<div>
+  <div
+    className="navbar"
+  >
+    <p>
+      Tax Calculator
+    </p>
+  </div>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <br />
+    <h5
+      className="MuiTypography-root MuiTypography-h5"
+    >
+      Enter Your Monthly Salary
+    </h5>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+        data-shrink={false}
+        htmlFor="monthly-sal"
+        id="monthly-sal-label"
+      >
+        Monthly Salary 
+      </label>
+      <div
+        className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiOutlinedInput-input"
+          disabled={false}
+          id="monthly-sal"
+          maxLength="12"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          style={
+            Object {
+              "fontSize": 30,
+            }
+          }
+          type="text"
+          value=""
+        />
+        <fieldset
+          aria-hidden={true}
+          className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            className="PrivateNotchedOutline-legendLabelled-3"
+          >
+            <span>
+              Monthly Salary 
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <fieldset
+      className="MuiFormControl-root"
+    >
+      <legend
+        className="MuiFormLabel-root"
+      >
+        Profile
+      </legend>
+      <div
+        aria-label="profile"
+        className="MuiFormGroup-root"
+        role="radiogroup"
+      >
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled={false}
+            className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-5 MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-checked-6 Mui-checked MuiIconButton-colorSecondary"
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <input
+                checked={true}
+                className="PrivateSwitchBase-input-8"
+                disabled={false}
+                name="profile"
+                onChange={[Function]}
+                type="radio"
+                value="TK0"
+              />
+              <div
+                className="PrivateRadioButtonIcon-root-9 PrivateRadioButtonIcon-checked-11"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-10"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <span
+            className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+          >
+            Single
+          </span>
+        </label>
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled={false}
+            className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-5 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <input
+                checked={false}
+                className="PrivateSwitchBase-input-8"
+                disabled={false}
+                name="profile"
+                onChange={[Function]}
+                type="radio"
+                value="K0"
+              />
+              <div
+                className="PrivateRadioButtonIcon-root-9"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-10"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <span
+            className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+          >
+            Married with no dependants
+          </span>
+        </label>
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled={false}
+            className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-5 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <input
+                checked={false}
+                className="PrivateSwitchBase-input-8"
+                disabled={false}
+                name="profile"
+                onChange={[Function]}
+                type="radio"
+                value="K1"
+              />
+              <div
+                className="PrivateRadioButtonIcon-root-9"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-10"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <span
+            className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+          >
+            Married with 1 dependants
+          </span>
+        </label>
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled={false}
+            className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-5 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <input
+                checked={false}
+                className="PrivateSwitchBase-input-8"
+                disabled={false}
+                name="profile"
+                onChange={[Function]}
+                type="radio"
+                value="K2"
+              />
+              <div
+                className="PrivateRadioButtonIcon-root-9"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-10"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <span
+            className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+          >
+            Married with 2 dependants
+          </span>
+        </label>
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled={false}
+            className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-5 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <input
+                checked={false}
+                className="PrivateSwitchBase-input-8"
+                disabled={false}
+                name="profile"
+                onChange={[Function]}
+                type="radio"
+                value="K3"
+              />
+              <div
+                className="PrivateRadioButtonIcon-root-9"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-10"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <span
+            className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+          >
+            Married with 3 dependants
+          </span>
+        </label>
+      </div>
+    </fieldset>
+    <br />
+    <br />
+  </div>
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-25"
+        >
+          <label>
+            Monthly Income
+          </label>
+        </div>
+        <div
+          className="col-75"
+        >
+          <input
+            disabled={true}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-25"
+        >
+          <label>
+            Annual Income
+          </label>
+        </div>
+        <div
+          className="col-75"
+        >
+          <input
+            disabled={true}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-25"
+        >
+          <label>
+            Tax Relief Profile
+          </label>
+        </div>
+        <div
+          className="col-75"
+        >
+          <input
+            disabled={true}
+            type="text"
+            value="TK0"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-25"
+        >
+          <label>
+            Annual Taxable Income
+          </label>
+        </div>
+        <div
+          className="col-75"
+        >
+          <input
+            disabled={true}
+            style={
+              Object {
+                "color": "red",
+                "fontWeight": "600",
+              }
+            }
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-25"
+        >
+          <label>
+            Annual Tax Income
+          </label>
+        </div>
+        <div
+          className="col-75"
+        >
+          <input
+            disabled={true}
+            style={
+              Object {
+                "color": "red",
+                "fontWeight": "600",
+              }
+            }
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-25"
+        >
+          <label>
+            Annual Income After Deductions
+          </label>
+        </div>
+        <div
+          className="col-75"
+        >
+          <input
+            disabled={true}
+            style={
+              Object {
+                "color": "green",
+                "fontWeight": "600",
+              }
+            }
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-25"
+        >
+          <label>
+            Monthly Tax
+          </label>
+        </div>
+        <div
+          className="col-75"
+        >
+          <input
+            disabled={true}
+            style={
+              Object {
+                "color": "red",
+                "fontWeight": "600",
+              }
+            }
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-25"
+        >
+          <label>
+            Take Home Pay(Monthly)
+          </label>
+        </div>
+        <div
+          className="col-75"
+        >
+          <input
+            disabled={true}
+            style={
+              Object {
+                "color": "green",
+                "fontWeight": "600",
+              }
+            }
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div
+    align="center"
+  >
+    <button
+      aria-label="Delete"
+      className="MuiButtonBase-root MuiFab-root MuiFab-extended MuiFab-primary"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "backgroundColor": "black",
+          "margin": "0",
+          "marginTop": "5px",
+        }
+      }
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiFab-label"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root"
+          focusable="false"
+          style={
+            Object {
+              "marginRight": "0",
+            }
+          }
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+          />
+        </svg>
+        ­Show Income Tax Bracket
+      </span>
+    </button>
+  </div>
+  <br />
+  <br />
+  <div
+    className="footer"
+  >
+    <p>
+      Developed by
+       
+      <a
+        href="https://github.com/deepinbytes"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Ajay P
+      </a>
+    </p>
+  </div>
+</div>
+`;
