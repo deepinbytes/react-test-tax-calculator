@@ -45,18 +45,18 @@ class App extends Component {
 
     setDetails = (value, limit, monthlyIncome, monthlyTax, salaryAfterTax,
                   annualIncome, annualTax, annualIncomeAfterTax, annualTaxAfterRelief) => {
-           this.setState({
-               value: value,
-               limit: limit,
-               monthlyIncome: this.currencyFormat(parseFloat(monthlyIncome).toFixed(3)),
-               monthlyTax: this.currencyFormat(parseFloat(monthlyTax).toFixed(3)),
-               salaryAfterTax: this.currencyFormat(parseFloat(salaryAfterTax).toFixed(3)),
-               annualIncome: this.currencyFormat(parseFloat(annualIncome).toFixed(3)),
-               annualTax: this.currencyFormat(parseFloat(annualTax).toFixed(3)),
-               annualIncomeAfterTax: this.currencyFormat(parseFloat(annualIncomeAfterTax).toFixed(3)),
-               annualIncomeAfterTaxRelief: this.currencyFormat(parseFloat(annualTaxAfterRelief).toFixed(3))
-           });
-       };
+        this.setState({
+            value: value,
+            limit: limit,
+            monthlyIncome: this.currencyFormat(parseFloat(monthlyIncome).toFixed(3)),
+            monthlyTax: this.currencyFormat(parseFloat(monthlyTax).toFixed(3)),
+            salaryAfterTax: this.currencyFormat(parseFloat(salaryAfterTax).toFixed(3)),
+            annualIncome: this.currencyFormat(parseFloat(annualIncome).toFixed(3)),
+            annualTax: this.currencyFormat(parseFloat(annualTax).toFixed(3)),
+            annualIncomeAfterTax: this.currencyFormat(parseFloat(annualIncomeAfterTax).toFixed(3)),
+            annualIncomeAfterTaxRelief: this.currencyFormat(parseFloat(annualTaxAfterRelief).toFixed(3))
+        });
+    };
 
 
     calculateTaxRelief = annualSalary => {
@@ -238,7 +238,7 @@ class App extends Component {
                     </Typography>
 
                     <TextField
-                        id= "monthly-sal"
+                        id="monthly-sal"
                         label="Monthly Salary "
                         type="text"
                         margin="normal"
@@ -282,7 +282,7 @@ class App extends Component {
                                     <label>Monthly Income</label>
                                 </div>
                                 <div className="col-75">
-                                    <input type="text" value={monthlyIncome} disabled/>
+                                    <input id="monthly-income" type="text" value={monthlyIncome} disabled/>
                                 </div>
                             </div>
 
@@ -292,7 +292,7 @@ class App extends Component {
                                     <label>Annual Income</label>
                                 </div>
                                 <div className="col-75">
-                                    <input type="text" value={annualIncome} disabled/>
+                                    <input id="annual-income" type="text" value={annualIncome} disabled/>
                                 </div>
                             </div>
 
@@ -310,7 +310,8 @@ class App extends Component {
                                     <label>Annual Taxable Income</label>
                                 </div>
                                 <div className="col-75">
-                                    <input type="text" style={{color: "red", fontWeight: "600"}}
+                                    <input id="annual-taxable-income" type="text"
+                                           style={{color: "red", fontWeight: "600"}}
                                            value={annualIncomeAfterTaxRelief} disabled/>
                                 </div>
                             </div>
@@ -320,7 +321,8 @@ class App extends Component {
                                     <label>Annual Tax Income</label>
                                 </div>
                                 <div className="col-75">
-                                    <input type="text" style={{color: "red", fontWeight: "600"}} value={annualTax}
+                                    <input id="annual-tax-income" type="text" style={{color: "red", fontWeight: "600"}}
+                                           value={annualTax}
                                            disabled/>
                                 </div>
 
@@ -331,6 +333,7 @@ class App extends Component {
                                 </div>
                                 <div className="col-75">
                                     <input
+                                        id="annual-income-deductions"
                                         type="text"
                                         value={annualIncomeAfterTax}
                                         style={{color: "green", fontWeight: "600"}}
@@ -344,6 +347,7 @@ class App extends Component {
                                 </div>
                                 <div className="col-75">
                                     <input
+                                        id="monthly-tax"
                                         type="text"
                                         value={monthlyTax}
                                         style={{color: "red", fontWeight: "600"}}
@@ -356,7 +360,7 @@ class App extends Component {
                                     <label>Take Home Pay(Monthly)</label>
                                 </div>
                                 <div className="col-75">
-                                    <input type="text" style={{color: "green", fontWeight: "600"}}
+                                    <input id="take-home" type="text" style={{color: "green", fontWeight: "600"}}
                                            value={salaryAfterTax} disabled/>
                                 </div>
                             </div>
@@ -368,10 +372,11 @@ class App extends Component {
 
                 {!taxBracketStatus && (
                     <div align="center"><Fab
+                        id = "tax-bracket"
                         color="primary"
                         variant="extended"
                         aria-label="Delete"
-                        style={{margin: "0", marginTop: "5px",  backgroundColor: "black"}}
+                        style={{margin: "0", marginTop: "5px", backgroundColor: "black"}}
                         onClick={() => {
                             this.setState({taxBracketStatus: !taxBracketStatus});
                         }}
@@ -385,6 +390,7 @@ class App extends Component {
                     <Container>
                         <TaxBracket/>
                         <div align="center"><Fab
+                            id = "tax-bracket-close"
                             color="secondary"
                             variant="extended"
                             aria-label="Delete"

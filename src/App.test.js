@@ -87,5 +87,28 @@ describe('state interactions', () => {
 
 });
 
+describe('detail display', () => {
+    test('should change the tax detail fields when monthly salary input is changed', () => {
+        const input = wrapper.find("input").at(0);
 
+        input.simulate('change',
+            {target: {value: '500000'}}
+        );
+        const monthlyIncome = wrapper.find("#monthly-income");
+        const annualIncome = wrapper.find("#annual-income");
+        const annualTaxIncome = wrapper.find("#annual-tax-income");
+        const annualIncomeDeductions = wrapper.find("#annual-income-deductions");
+        const monthlyTax = wrapper.find("#monthly-tax");
+        const takeHome = wrapper.find("#take-home");
+        const annualTaxableincome = wrapper.find("#annual-taxable-income");
 
+        expect(annualTaxableincome.props().value).toEqual('5.946.000.000 IDR');
+        expect(monthlyIncome.props().value).toEqual('500.000.000 IDR');
+        expect(annualIncome.props().value).toEqual('6.000.000.000 IDR');
+        expect(annualTaxIncome.props().value).toEqual('1.728.800.000 IDR');
+        expect(annualIncomeDeductions.props().value).toEqual('4.271.200.000 IDR');
+        expect(monthlyTax.props().value).toEqual('144.066.667 IDR');
+        expect(takeHome.props().value).toEqual('355.933.333 IDR');
+    });
+
+});

@@ -419,6 +419,7 @@ exports[`App snapshot renders 1`] = `
         >
           <input
             disabled={true}
+            id="monthly-income"
             type="text"
             value=""
           />
@@ -439,6 +440,7 @@ exports[`App snapshot renders 1`] = `
         >
           <input
             disabled={true}
+            id="annual-income"
             type="text"
             value=""
           />
@@ -479,6 +481,7 @@ exports[`App snapshot renders 1`] = `
         >
           <input
             disabled={true}
+            id="annual-taxable-income"
             style={
               Object {
                 "color": "red",
@@ -505,6 +508,7 @@ exports[`App snapshot renders 1`] = `
         >
           <input
             disabled={true}
+            id="annual-tax-income"
             style={
               Object {
                 "color": "red",
@@ -531,6 +535,7 @@ exports[`App snapshot renders 1`] = `
         >
           <input
             disabled={true}
+            id="annual-income-deductions"
             style={
               Object {
                 "color": "green",
@@ -557,6 +562,7 @@ exports[`App snapshot renders 1`] = `
         >
           <input
             disabled={true}
+            id="monthly-tax"
             style={
               Object {
                 "color": "red",
@@ -583,6 +589,7 @@ exports[`App snapshot renders 1`] = `
         >
           <input
             disabled={true}
+            id="take-home"
             style={
               Object {
                 "color": "green",
@@ -604,6 +611,7 @@ exports[`App snapshot renders 1`] = `
       aria-label="Delete"
       className="MuiButtonBase-root MuiFab-root MuiFab-extended MuiFab-primary"
       disabled={false}
+      id="tax-bracket"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
