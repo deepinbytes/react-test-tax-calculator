@@ -14,6 +14,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import TaxDetail from "./Components/TaxDetail";
 
 const RELIEF_PROFILE_TK0 = 54000, RELIEF_PROFILE_K0 = 58500, RELIEF_PROFILE_K1 = 63000, RELIEF_PROFILE_K2 = 67500,
     RELIEF_PROFILE_K3 = 72000;
@@ -275,98 +276,15 @@ class App extends Component {
                 </Container>
 
                 {!limit && (
-                    <div className="container">
-                        <div>
-                            <div className="row">
-                                <div className="col-25">
-                                    <label>Monthly Income</label>
-                                </div>
-                                <div className="col-75">
-                                    <input id="monthly-income" type="text" value={monthlyIncome} disabled/>
-                                </div>
-                            </div>
-
-
-                            <div className="row">
-                                <div className="col-25">
-                                    <label>Annual Income</label>
-                                </div>
-                                <div className="col-75">
-                                    <input id="annual-income" type="text" value={annualIncome} disabled/>
-                                </div>
-                            </div>
-
-
-                            <div className="row">
-                                <div className="col-25">
-                                    <label>Tax Relief Profile</label>
-                                </div>
-                                <div className="col-75">
-                                    <input type="text" value={profile} disabled/>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-25">
-                                    <label>Annual Taxable Income</label>
-                                </div>
-                                <div className="col-75">
-                                    <input id="annual-taxable-income" type="text"
-                                           style={{color: "red", fontWeight: "600"}}
-                                           value={annualIncomeAfterTaxRelief} disabled/>
-                                </div>
-                            </div>
-
-                            <div className="row">
-                                <div className="col-25">
-                                    <label>Annual Tax Income</label>
-                                </div>
-                                <div className="col-75">
-                                    <input id="annual-tax-income" type="text" style={{color: "red", fontWeight: "600"}}
-                                           value={annualTax}
-                                           disabled/>
-                                </div>
-
-                            </div>
-                            <div className="row">
-                                <div className="col-25">
-                                    <label>Annual Income After Deductions</label>
-                                </div>
-                                <div className="col-75">
-                                    <input
-                                        id="annual-income-deductions"
-                                        type="text"
-                                        value={annualIncomeAfterTax}
-                                        style={{color: "green", fontWeight: "600"}}
-                                        disabled
-                                    />
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-25">
-                                    <label>Monthly Tax</label>
-                                </div>
-                                <div className="col-75">
-                                    <input
-                                        id="monthly-tax"
-                                        type="text"
-                                        value={monthlyTax}
-                                        style={{color: "red", fontWeight: "600"}}
-                                        disabled
-                                    />
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-25">
-                                    <label>Take Home Pay(Monthly)</label>
-                                </div>
-                                <div className="col-75">
-                                    <input id="take-home" type="text" style={{color: "green", fontWeight: "600"}}
-                                           value={salaryAfterTax} disabled/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <TaxDetail monthlyIncome={monthlyIncome}
+                    monthlyTax={monthlyTax}
+                    salaryAfterTax={salaryAfterTax}
+                    annualIncome={annualIncome}
+                    annualTax={annualTax}
+                    annualIncomeAfterTax={annualIncomeAfterTax}
+                    annualIncomeAfterTaxRelief={annualIncomeAfterTaxRelief}
+                    profile={profile}>
+                    </TaxDetail>
                 )}
                 <br/>
 
